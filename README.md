@@ -2,7 +2,7 @@
 
 ```{bash}
 git clone https://framagit.org/A-d-r-i/bbb-downloader.git
-cd BBB-downloader
+cd bbb-downloader
 chmod u+x down.sh 
-sudo ./down.sh
+./down.sh
 ```
