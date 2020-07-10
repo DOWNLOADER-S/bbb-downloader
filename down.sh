@@ -8,7 +8,8 @@ then
     exit 1
 fi
 
-# Install ffmpeg
+# check git & Install ffmpeg
+git pull
 apt install -y ffmpeg
 
 # if ./down.sh $1 $2 $3 $4
