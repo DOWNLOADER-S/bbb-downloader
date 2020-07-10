@@ -8,8 +8,7 @@ then
     exit 1
 fi
 
-# check git & Install ffmpeg
-git reset --hard HEAD && git checkout master && git pull
+# Install ffmpeg
 apt install -y ffmpeg
 
 # if ./down.sh $1 $2 $3 $4
@@ -42,4 +41,4 @@ wget "https://$URL/presentation/$meetingID/video/webcams.mp4"
 wget "https://$URL/presentation/$meetingID/deskshare/deskshare.mp4"
 
 #Merge the recordings
-ffmpeg -i webcams.mp4 -i deskshare.mp4 -c copy MEETING-VIDEO.mp4
+ffmpeg -i webcams.mp4 -i deskshare.mp4 -c copy $NAME.mp4
