@@ -12,15 +12,15 @@ fi
 apt install -y ffmpeg
 
 #create directory to download
-read -p 'What do you want to call the downloads folder?' DOWNLOAD
+read -p 'What do you want to call the downloads folder? ==>' DOWNLOAD
 mkdir $DOWNLOAD
 cd $DOWNLOAD
 
 #ask server URL
-read -p 'What is the server url?' URL
+read -p 'What is the server url (without "https" and "/" || e.g. google.com)? ==>' URL
 
 #ask meeting ID
-read -p 'What is the meeting ID?' meetingID
+read -p 'What is the meeting ID? ==>' meetingID
 
 #download
 wget "https://$URL/presentation/$meetingID/video/webcams.mp4"
