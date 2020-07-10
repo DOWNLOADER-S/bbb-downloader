@@ -30,7 +30,7 @@ NAME=$4
 fi
 
 #create directory to download
-mkdir ../$DOWNLOAD
+mkdir -m 777 ../$DOWNLOAD
 cd ../$DOWNLOAD
 
 #download
