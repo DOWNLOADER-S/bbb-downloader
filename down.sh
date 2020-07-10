@@ -30,8 +30,8 @@ NAME=$4
 fi
 
 #create directory to download
-mkdir $DOWNLOAD
-cd $DOWNLOAD
+mkdir ../$DOWNLOAD
+cd ../$DOWNLOAD
 
 #download
 WEBCAMS="https://$URL/presentation/$meetingID/video/webcams.mp4"
