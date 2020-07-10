@@ -9,7 +9,7 @@ then
 fi
 
 # check git & Install ffmpeg
-git pull
+git reset --hard HEAD && git checkout master && git pull
 apt install -y ffmpeg
 
 # if ./down.sh $1 $2 $3 $4
