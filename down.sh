@@ -23,8 +23,11 @@ read -p 'What is the server url (without "https" and "/" || e.g. google.com)? ==
 read -p 'What is the meeting ID? ==>' meetingID
 
 #download
-wget "https://$URL/presentation/$meetingID/video/webcams.mp4"
-wget "https://$URL/presentation/$meetingID/deskshare/deskshare.mp4"
+WEBCAMS="https://$URL/presentation/$meetingID/video/webcams.mp4"
+DESKSHARE="https://$URL/presentation/$meetingID/deskshare/deskshare.mp4"
+
+wget WEBCAMS
+wget DESKSHARE
 
 #Merge the recordings
 ffmpeg -i webcams.mp4 -i deskshare.mp4 -c copy MEETING-VIDEO.mp4
