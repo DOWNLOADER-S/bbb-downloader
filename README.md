@@ -26,7 +26,7 @@ Two options :
 ./down.sh DOWNLOAD_FOLDER URL meetingID NAME_FILE FTP EMAIL
 ```
 **Parameters** :
-The conference replay link should look like this:
+The conference replay link should look like this:\n
 https://`BBB_SERVER`/playback/presentation/2.0/playback.html?meetingId=`MEETING_ID`
 * DOWNLOAD_FOLDER : local address of the download folder *(*preferably non-existent and empty*)
 * URL : meeting server url (`BBB_SERVER` without "https" or "http" and without "/" slash | e.g. "google.com")
