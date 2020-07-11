@@ -37,8 +37,13 @@ cd ../$DOWNLOAD
 WEBCAMS="https://$URL/presentation/$meetingID/video/webcams.mp4"
 DESKSHARE="https://$URL/presentation/$meetingID/deskshare/deskshare.mp4"
 
-wget "https://$URL/presentation/$meetingID/video/webcams.mp4"
-wget "https://$URL/presentation/$meetingID/deskshare/deskshare.mp4"
+wget "$WEBCAMS"
+wget "$WEBCAMS"
 
 #Merge the recordings
 ffmpeg -i webcams.mp4 -i deskshare.mp4 -c copy $NAME.mp4
+
+#change permissions of the folder and files
+cd ../
+chmod -R 777 $DOWNLOAD
+cd ../bbb-recorder
