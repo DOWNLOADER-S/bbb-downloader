@@ -49,8 +49,10 @@ chmod -R 777 $DOWNLOAD
 cd ../bbb-downloader
 
 #Final message for user
+echo "========================================================================================="
 echo "Thanks for use of BBB-downloader!"
 echo "To sump up :"
 echo -e "The final folder is $DOWNLOAD and you final file is $NAME.mp4"
 echo "Enjoy it!"
 echo "A-d-r-i"
+echo "========================================================================================="
