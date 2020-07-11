@@ -29,7 +29,7 @@ Two options :
 The conference replay link should look like this:  
 https://`BBB_SERVER`/playback/presentation/2.0/playback.html?meetingId=`MEETING_ID`  
 *sample* :  
-https://domain.com/playback/presentation/2.0/playback.html?meetingId=65edkjejhdjbt-6322321
+[https://domain.com/playback/presentation/2.0/playback.html?meetingId=65edkjejhdjbt-6322321]()
 
 
 * **DOWNLOAD_FOLDER** : local address of the download folder (*preferably non-existent and empty*)
