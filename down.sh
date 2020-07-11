@@ -13,8 +13,8 @@ apt install -y ffmpeg
 apt install -y ftp
 apt install -y curl
 
-# if ./down.sh $1 $2 $3 $4
-if [[ -z $1 && -z $2 && -z $3 && -z $4 ]]
+# if ./down.sh $1 $2 $3 $4 $5 $6
+if [[ -z $1 && -z $2 && -z $3 && -z $4 && -z $5 && -z $6 ]]
 
 then
 #ask directory & server URL & meeting ID & name of the final file
@@ -58,7 +58,7 @@ cd ../
 chmod -R 777 $DOWNLOAD
 cd bbb-downloader
 
-#send by ftp
+#send by ftp (always the same password)
 if [ FTP=Y ]
 then
 curl -q -T "../$DOWNLOAD/$fiNAME" -u "$EMAIL":'test' ftp://dl.free.fr/
