@@ -56,7 +56,7 @@ ffmpeg -i webcams.mp4 -i deskshare.mp4 -c copy $fiNAME
 #change permissions of the folder and files
 cd ../
 chmod -R 777 $DOWNLOAD
-cd ../bbb-downloader
+cd bbb-downloader
 
 #send by ftp
 if [ FTP=Y ]
