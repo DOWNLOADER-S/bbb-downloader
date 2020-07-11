@@ -33,6 +33,8 @@ DOWNLOAD=$1
 URL=$2
 meetingID=$3
 NAME=$4
+FTP=$5
+EMAIL=$6
 
 fi
 
