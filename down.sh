@@ -61,7 +61,7 @@ cd bbb-downloader
 #send by ftp
 if [ FTP=Y ]
 then
-curl -q -T "../$DOWNLOAD/$fiNAME" -u "$EMAIL":"$fiNAME" ftp://dl.free.fr/
+curl -q -T "../$DOWNLOAD/$fiNAME" -u '$EMAIL':'$fiNAME' ftp://dl.free.fr/
 
 if [ $? -eq 0 ]
 then
