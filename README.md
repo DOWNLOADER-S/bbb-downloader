@@ -33,7 +33,7 @@ https://`BBB_SERVER`/playback/presentation/2.0/playback.html?meetingId=`MEETING_
 
 
 * **DOWNLOAD_FOLDER** : local address of the download folder (*preferably non-existent and empty*)
-* **URL** : meeting server url (`BBB_SERVER` without "https" or "http" and without "/" slash | e.g. "domain.com")
+* **URL** : meeting server url (`BBB_SERVER` without "*https*" or "*http*" and without "/" slash | e.g. "*domain.com*")
 * **meetingID** : the conference ID (`MEETING_ID`)
 * **NAME** : the name of the final file (*without extension*)
 * **FTP** : upload the final video file to a free server (two choice : `Y` for YES and `N` for no)
@@ -47,8 +47,8 @@ It may be necessary in the future to update this script. For this it is extremel
 cd bbb-downloader
 git reset --hard HEAD && git checkout master && git pull
 chmod u+x down.sh 
-./down.sh
 ```
+And [run the script](#run-the-code)
 
 *Ressources used* :
 - [FFmpeg](https://github.com/FFmpeg/FFmpeg)
