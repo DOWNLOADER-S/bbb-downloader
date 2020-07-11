@@ -46,4 +46,11 @@ ffmpeg -i webcams.mp4 -i deskshare.mp4 -c copy $NAME.mp4
 #change permissions of the folder and files
 cd ../
 chmod -R 777 $DOWNLOAD
-cd ../bbb-recorder
+cd ../bbb-downloader
+
+#Final message for user
+echo "Thanks for use of BBB-downloader!"
+echo "To sump up :"
+echo -e "The final folder is $DOWNLOAD and you final file is $NAME.mp4"
+echo "Enjoy it!"
+echo "A-d-r-i"
