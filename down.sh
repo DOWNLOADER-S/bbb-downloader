@@ -22,7 +22,7 @@ read -p 'What do you want to call the downloads folder? ==> ' DOWNLOAD
 read -p 'What is the server url (without "https" and "/" || e.g. google.com)? ==> ' URL
 read -p 'What is the meeting ID? ==>' meetingID
 read -p 'What do you want to call the final file (if empty : MEETING-VIDEO)? ==> ' NAME
-read -P 'Do you want to receive the final file by email (in a download link)? (Y for yes and N for no) ==>' FTP
+read -p 'Do you want to receive the final file by email (in a download link)? (Y for yes and N for no) ==>' FTP
 
 if [ FTP=Y ]
 then read -P 'What is your email address? ==>' EMAIL
