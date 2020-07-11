@@ -19,7 +19,7 @@ if [[ -z $1 && -z $2 && -z $3 && -z $4 && -z $5 && -z $6 ]]
 then
 #ask directory & server URL & meeting ID & name of the final file
 read -p 'What do you want to call the downloads folder? ==> ' DOWNLOAD
-read -p 'What is the server url (without "https" and "/" || e.g. google.com)? ==> ' URL
+read -p 'What is the server url (without "https" and "/" || e.g. domain.com)? ==> ' URL
 read -p 'What is the meeting ID? ==>' meetingID
 read -p 'What do you want to call the final file (if empty : MEETING-VIDEO)? ==> ' NAME
 read -p 'Do you want to receive the final file by email (in a download link)? (Y for yes and N for no) ==>' FTP
