@@ -76,10 +76,10 @@ fi
 echo "================================================================"
 echo "Thanks for use of BBB-downloader!"
 echo "To sump up :"
-echo -e "The final folder is $DOWNLOAD and you final file is $NAME.mp4"
+echo -e " - The final folder is $DOWNLOAD and you final file is $NAME.mp4"
 
 if [ FTP=Y ]
-then echo -e "The final file has been uploaded to the server, you will receive an email to download it to this address: $EMAIL"
+then echo -e " - The final file has been uploaded to the server, you will receive an email to download it to this address: $EMAIL"
 fi
 
 echo "Enjoy it!"
