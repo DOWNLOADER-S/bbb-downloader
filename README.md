@@ -16,8 +16,8 @@ cd bbb-downloader
 chmod u+x down.sh 
 ./down.sh
 ```
-It may be necessary in the future to update this script for this.
 ## Update Git clone
+It may be necessary in the future to update this script. For this it is extremely important to place yourself in the git folder "bbb-downloader" and to execute the code below:
 ```{bash}
 git reset --hard HEAD && git checkout master && git pull
 chmod u+x down.sh 
