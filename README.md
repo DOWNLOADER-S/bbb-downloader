@@ -1,6 +1,6 @@
 # BBB-downloader
 
-For a video conference, the speaker has to use the BigBlueButton support. Fortunately, despite the recording of the conference, it remains accessible only on the latter's website, so it is not accessible offline. In addition to this, BBB tries to limit downloads by separating video and audio.
+For a video conference, the speaker has to use the [BigBlueButton](https://github.com/bigbluebutton) support. Fortunately, despite the recording of the conference, it remains accessible only on the latter's website, so it is not accessible offline. In addition to this, BBB tries to limit downloads by separating video and audio.
 
 It is by starting from this principle and by failing with the other proposed methods, that I decided to build a shell script in order to:
 - download the video AND the sound (*July 2020: not yet the comments of the conference, it's in progress, but is it really important?*)
@@ -25,8 +25,8 @@ chmod u+x down.sh
 ```
 
 *Ressources used* :
-- FFmpeg
-- curl
-- http://dashohoxha.fs.al/download-bbb-presentation/
-- https://forum.ubuntu-fr.org/viewtopic.php?id=120246
-- http://dl.free.fr
+- [FFmpeg](url)
+- [curl](url)
+- [Download BBB](http://dashohoxha.fs.al/download-bbb-presentation/)
+- [Script to the server](https://forum.ubuntu-fr.org/viewtopic.php?id=120246)
+- [Link to the free server](http://dl.free.fr)
