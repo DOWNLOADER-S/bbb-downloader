@@ -13,12 +13,28 @@ It is by starting from this principle and by failing with the other proposed met
 ```{bash}
 git clone https://framagit.org/A-d-r-i/bbb-downloader.git
 cd bbb-downloader
-chmod u+x down.sh 
+chmod u+x down.sh
+```
+##Run the code
+Two options :
+- First: "basically" and interactively. Simply run the script and answer the questions.
+```{bash}
 ./down.sh
 ```
+- Secondly: quickly run the entire code using parameters like this (see details of the parameters below):
+```{bash}
+./down.sh DOWNLOAD_FOLDER URL meetingID NAME_FILE FTP EMAIL
+```
+**Parameters** :
+The conference replay link should look like this: https://`BBB_SERVER`/playback/presentation/playback.html?meetingId=`MEETING_ID`
+* DOWNLOAD_FOLDER : local address of the download folder *(*preferably non-existent and empty*)
+* URL : meeting server url (`BBB_SERVER` without "https" or "http" and without "/" slash | e.g. "google.com")
+* meetingID : the conference ID (`MEETING_ID`)
+
 ## Update Git clone
 It may be necessary in the future to update this script. For this it is extremely important to place yourself in the git folder "bbb-downloader" (say in the code) and to execute the code below:
 ```{bash}
+cd bbb-downloader
 git reset --hard HEAD && git checkout master && git pull
 chmod u+x down.sh 
 ./down.sh
