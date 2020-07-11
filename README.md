@@ -48,7 +48,7 @@ cd bbb-downloader
 git reset --hard HEAD && git checkout master && git pull
 chmod u+x down.sh 
 ```
-And [run the script](#run-the-code)
+**And [run the script](#run-the-code) again!**
 
 *Ressources used* :
 - [FFmpeg](https://github.com/FFmpeg/FFmpeg)
