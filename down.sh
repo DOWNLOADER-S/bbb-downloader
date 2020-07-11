@@ -25,7 +25,7 @@ read -p 'What do you want to call the final file (if empty : MEETING-VIDEO)? ==>
 read -p 'Do you want to receive the final file by email (in a download link)? (Y for yes and N for no) ==>' FTP
 
 if [ FTP=Y ]
-then read -P 'What is your email address? ==>' EMAIL
+then read -p 'What is your email address? ==>' EMAIL
 fi
 
 else
