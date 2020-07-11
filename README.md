@@ -1,5 +1,5 @@
 # BBB-downloader
-## Instal Git clone
+## Install Git clone
 ```{bash}
 git clone https://framagit.org/A-d-r-i/bbb-downloader.git
 cd bbb-downloader
