@@ -61,11 +61,11 @@ cd bbb-downloader
 #send by ftp
 if [ FTP=Y ]
 then
-curl -q -T "../$DOWNLOAD/$fiNAME" -u $EMAIL:toto ftp://dl.free.fr/
+curl -q -T "../$DOWNLOAD/$fiNAME" -u $EMAIL:$fiNAME ftp://dl.free.fr/
 
 if [ $? -eq 0 ]
 then
-    echo "Fichier $1 transféré avec succès, le lien de téléchargement a été envoyé à l'adresse $EMAIL."
+    echo "Fichier $fiNAME transféré avec succès, le lien de téléchargement a été envoyé à l'adresse $EMAIL."
 else
     echo "Erreur lors du transfert ! vérifiez votre configuration ou réessayez plus tard."
 fi
