@@ -48,7 +48,8 @@ wget -O "$WEBCAMS"
 wget -O "$DESKSHARE"
 
 #Merge the recordings
-ffmpeg -i webcams.mp4 -i deskshare.mp4 -c copy $NAME.mp4
+fiNAME="$NAME.mp4"
+ffmpeg -i webcams.mp4 -i deskshare.mp4 -c copy $fiNAME
 
 #change permissions of the folder and files
 cd ../
@@ -58,7 +59,7 @@ cd ../bbb-downloader
 #send by ftp
 if [ FTP=Y ]
 then
-curl -q -T "$1" -u $EMAIL:toto ftp://dl.free.fr/
+curl -q -T "../$DOWNLOAD/$fiNAME" -u $EMAIL:toto ftp://dl.free.fr/
 
 if [ $? -eq 0 ]
 then
