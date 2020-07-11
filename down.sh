@@ -8,8 +8,10 @@ then
     exit 1
 fi
 
-# Install ffmpeg
+# Install ffmpeg & ftp & curl
 apt install -y ffmpeg
+apt install -y ftp
+apt install -y curl
 
 # if ./down.sh $1 $2 $3 $4
 if [[ -z $1 && -z $2 && -z $3 && -z $4 ]]
@@ -20,6 +22,11 @@ read -p 'What do you want to call the downloads folder? ==> ' DOWNLOAD
 read -p 'What is the server url (without "https" and "/" || e.g. google.com)? ==> ' URL
 read -p 'What is the meeting ID? ==>' meetingID
 read -p 'What do you want to call the final file (if empty : MEETING-VIDEO)? ==> ' NAME
+read -P 'Do you want to receive the final file by email (in a download link)? (Y for yes and N for no) ==>' FTP
+
+if [ FTP=Y ]
+then read -P 'What is your email address? ==>' EMAIL
+fi
 
 else
 DOWNLOAD=$1
@@ -48,11 +55,30 @@ cd ../
 chmod -R 777 $DOWNLOAD
 cd ../bbb-downloader
 
+#send by ftp
+if [ FTP=Y ]
+then
+curl -q -T "$1" -u $EMAIL:toto ftp://dl.free.fr/
+
+if [ $? -eq 0 ]
+then
+    echo "Fichier $1 transféré avec succès, le lien de téléchargement a été envoyé à l'adresse $EMAIL."
+else
+    echo "Erreur lors du transfert ! vérifiez votre configuration ou réessayez plus tard."
+fi
+
+fi
+
 #Final message for user
 echo "================================================================"
 echo "Thanks for use of BBB-downloader!"
 echo "To sump up :"
 echo -e "The final folder is $DOWNLOAD and you final file is $NAME.mp4"
+
+if [ FTP=Y ]
+then echo -e "The final file has been uploaded to the server, you will receive an email to download it to this address: $EMAIL"
+fi
+
 echo "Enjoy it!"
 echo "A-d-r-i"
 echo "================================================================"
