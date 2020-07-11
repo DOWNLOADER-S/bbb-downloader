@@ -24,7 +24,6 @@ Two options :
 - Secondly: quickly run the entire code using parameters like this (see details of the parameters below):
 ```{bash}
 ./down.sh DOWNLOAD_FOLDER URL meetingID NAME_FILE FTP EMAIL
-#sample : ./down.sh VIDEO_FOLDER google.com 65edkjejhdjbt-6322321 finalvideo Y mail@domain.com
 ```
 **Parameters** :
 The conference replay link should look like this:  
@@ -35,6 +34,8 @@ https://`BBB_SERVER`/playback/presentation/2.0/playback.html?meetingId=`MEETING_
 * **NAME** : the name of the final file (*without extension*)
 * **FTP** : upload the final video file to a free server (two choice : `Y` for YES and `N` for no)
 * **EMAIL** : your email address so that you are notified of the file download link (if you choose `Y`)
+
+Sample of code with parameters : `./down.sh VIDEO_FOLDER google.com 65edkjejhdjbt-6322321 finalvideo Y mail@domain.com`
 
 ## Update Git clone
 It may be necessary in the future to update this script. For this it is extremely important to place yourself in the git folder "bbb-downloader" (say in the code) and to execute the code below:
