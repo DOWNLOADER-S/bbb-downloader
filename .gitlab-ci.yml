@@ -4,6 +4,10 @@
 # you can delete this line if you're not using Docker
 image: busybox:latest
 
+job:script:
+  script: ./down.sh
+
+
 # before_script:
 # - echo "Before script section"
 # - echo "For example you might run an update here or install a build dependency"
@@ -15,8 +19,8 @@ image: busybox:latest
 
 # build1:
 #  stage: build
-  script:
-    - echo "Do your build here"
+#  script:
+#    - echo "Do your build here"
 
 #test1:
 #  stage: test
