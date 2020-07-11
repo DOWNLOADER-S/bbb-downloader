@@ -11,6 +11,7 @@ It is by starting from this principle and by failing with the other proposed met
 
 ## Install Git clone
 ```{bash}
+apt install git #if you don't have the package 'git'
 git clone https://framagit.org/A-d-r-i/bbb-downloader.git
 cd bbb-downloader
 chmod u+x down.sh
@@ -51,8 +52,10 @@ chmod u+x down.sh
 **And [run the script](#run-the-code) again!**
 
 *Ressources used* :
-- [FFmpeg](https://github.com/FFmpeg/FFmpeg)
-- [curl](https://github.com/curl/curl)
-- [Download BBB](http://dashohoxha.fs.al/download-bbb-presentation/)
-- [Script to the server](https://forum.ubuntu-fr.org/viewtopic.php?id=120246)
-- [Link to the free server](http://dl.free.fr)
+- [Git](https://github.com/git/git) / Package
+- [FFmpeg](https://github.com/FFmpeg/FFmpeg) / Package
+- [curl](https://github.com/curl/curl) / Package
+- FTP / Package
+- [Download BBB](http://dashohoxha.fs.al/download-bbb-presentation/) / Source
+- [Script to the server](https://forum.ubuntu-fr.org/viewtopic.php?id=120246) / Source
+- [Link to the free server](http://dl.free.fr) / Server
