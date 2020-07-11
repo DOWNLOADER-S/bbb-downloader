@@ -24,11 +24,12 @@ Two options :
 - Secondly: quickly run the entire code using parameters like this (see details of the parameters below):
 ```{bash}
 ./down.sh DOWNLOAD_FOLDER URL meetingID NAME_FILE FTP EMAIL
+#sample : ./down.sh VIDEO_FOLDER google.com 65edkjejhdjbt-6322321 finalvideo Y mail@domain.com
 ```
 **Parameters** :
 The conference replay link should look like this:  
 https://`BBB_SERVER`/playback/presentation/2.0/playback.html?meetingId=`MEETING_ID`
-* **DOWNLOAD_FOLDER** : local address of the download folder *(*preferably non-existent and empty*)
+* **DOWNLOAD_FOLDER** : local address of the download folder (*preferably non-existent and empty*)
 * **URL** : meeting server url (`BBB_SERVER` without "https" or "http" and without "/" slash | e.g. "google.com")
 * **meetingID** : the conference ID (`MEETING_ID`)
 * **NAME** : the name of the final file (*without extension*)
