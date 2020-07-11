@@ -15,7 +15,7 @@ git clone https://framagit.org/A-d-r-i/bbb-downloader.git
 cd bbb-downloader
 chmod u+x down.sh
 ```
-##Run the code
+## Run the code
 Two options :
 - First: "basically" and interactively. Simply run the script and answer the questions.
 ```{bash}
@@ -26,7 +26,8 @@ Two options :
 ./down.sh DOWNLOAD_FOLDER URL meetingID NAME_FILE FTP EMAIL
 ```
 **Parameters** :
-The conference replay link should look like this: https://`BBB_SERVER`/playback/presentation/playback.html?meetingId=`MEETING_ID`
+The conference replay link should look like this:
+https://`BBB_SERVER`/playback/presentation/2.0/playback.html?meetingId=`MEETING_ID`
 * DOWNLOAD_FOLDER : local address of the download folder *(*preferably non-existent and empty*)
 * URL : meeting server url (`BBB_SERVER` without "https" or "http" and without "/" slash | e.g. "google.com")
 * meetingID : the conference ID (`MEETING_ID`)
