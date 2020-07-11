@@ -46,8 +46,8 @@ cd ../$DOWNLOAD
 WEBCAMS="https://$URL/presentation/$meetingID/video/webcams.mp4"
 DESKSHARE="https://$URL/presentation/$meetingID/deskshare/deskshare.mp4"
 
-wget -O "$WEBCAMS"
-wget -O "$DESKSHARE"
+wget -o "$WEBCAMS"
+wget -o "$DESKSHARE"
 
 #Merge the recordings
 fiNAME="$NAME.mp4"
