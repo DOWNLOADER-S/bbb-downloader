@@ -4,8 +4,26 @@
 # you can delete this line if you're not using Docker
 image: busybox:latest
 
-job:script:
-  script: ./down.sh
+stages: # Ici on déclare toutes nos étapes
+  - build
+  - test
+  - deploy
+
+job:build:
+  stage: build # On déclare que ce `job` fait partie de l'étape build
+  script: make build
+
+job:test:unit:
+  stage: test # On déclare que ce `job` fait partie de l'étape test
+  script: make test-unit
+
+job:test:functional:
+  stage: test # On déclare que ce `job` fait partie de l'étape test
+  script: make test-functional
+
+job:deploy:
+  stage: deploy # On déclare que ce `job` fait partie de l'étape deploy
+  script: make deploy
 
 
 # before_script:
