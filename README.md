@@ -25,8 +25,8 @@ chmod u+x down.sh
 ```
 
 *Ressources used* :
-- [FFmpeg](url)
-- [curl](url)
+- [FFmpeg](https://github.com/FFmpeg/FFmpeg)
+- [curl](https://github.com/curl/curl)
 - [Download BBB](http://dashohoxha.fs.al/download-bbb-presentation/)
 - [Script to the server](https://forum.ubuntu-fr.org/viewtopic.php?id=120246)
 - [Link to the free server](http://dl.free.fr)
