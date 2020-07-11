@@ -28,9 +28,12 @@ Two options :
 **Parameters** :
 The conference replay link should look like this:  
 https://`BBB_SERVER`/playback/presentation/2.0/playback.html?meetingId=`MEETING_ID`
-* DOWNLOAD_FOLDER : local address of the download folder *(*preferably non-existent and empty*)
-* URL : meeting server url (`BBB_SERVER` without "https" or "http" and without "/" slash | e.g. "google.com")
-* meetingID : the conference ID (`MEETING_ID`)
+* **DOWNLOAD_FOLDER** : local address of the download folder *(*preferably non-existent and empty*)
+* **URL** : meeting server url (`BBB_SERVER` without "https" or "http" and without "/" slash | e.g. "google.com")
+* **meetingID** : the conference ID (`MEETING_ID`)
+* **NAME** : the name of the final file (*without extension*)
+* **FTP** : upload the final video file to a free server (two choice : `Y` for YES and `N` for no)
+* **EMAIL** : your email address so that you are notified of the file download link (if you choose `Y`)
 
 ## Update Git clone
 It may be necessary in the future to update this script. For this it is extremely important to place yourself in the git folder "bbb-downloader" (say in the code) and to execute the code below:
