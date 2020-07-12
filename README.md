@@ -9,9 +9,14 @@ It is by starting from this principle and by failing with the other proposed met
 
 **In the end, in about 5 min for ~200Mb, you get your file ready to view and store wherever you want!**
 
+*Required* :
+It is necessary to install the git package in order to clone the script and the directory on your device.
+```{bash}
+apt install git
+```
+
 ## Install Git clone
 ```{bash}
-apt install git #if you don't have the package 'git'
 git clone https://framagit.org/A-d-r-i/bbb-downloader.git
 cd bbb-downloader
 chmod u+x down.sh
