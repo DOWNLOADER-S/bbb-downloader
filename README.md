@@ -27,7 +27,7 @@ Two options :
 ```{bash}
 ./down.sh
 ```
-- Secondly: quickly run the entire code using parameters like this (see details of the parameters below):
+- Secondly: quickly run the entire code using parameters like this (*see details of the parameters below*):
 ```{bash}
 ./down.sh DOWNLOAD_FOLDER URL meetingID NAME_FILE FTP EMAIL
 ```
