@@ -41,7 +41,7 @@ The conference replay link should look like this:
 * **URL** : meeting server url (`BBB_SERVER` without "*https*" or "*http*" and without "/" slash | e.g. "*domain.com*")
 * **meetingID** : the conference ID (`MEETING_ID`)
 * **NAME** : the name of the final file (*without extension*)
-* **FTP** : upload the final video file to a free server (two choices : `Y` for YES and `N` for no)
+* **FTP** : upload the final video file to a free server (two choices : `Y` for YES and `N` for NO)
 * **EMAIL** : your email address so that you are notified of the file download link (if you choose `Y`)
 
 Sample of code with parameters : `./down.sh VIDEO_FOLDER domain.com 65edkjejhdjbt-6322321 finalvideo Y mail@domain.com`
