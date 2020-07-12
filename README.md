@@ -33,8 +33,8 @@ Two options :
 ```
 **Parameters** :
 The conference replay link should look like this:  
- - Typical URL : https://`BBB_SERVER`/playback/presentation/2.0/playback.html?meetingId=`MEETING_ID`  
- - Example URL : [https://domain.com/playback/presentation/2.0/playback.html?meetingId=65edkjejhdjbt-6322321]()
+    Typical URL : https://`BBB_SERVER`/playback/presentation/2.0/playback.html?meetingId=`MEETING_ID`  
+    Example URL : [https://domain.com/playback/presentation/2.0/playback.html?meetingId=65edkjejhdjbt-6322321]()
 
 
 * **DOWNLOAD_FOLDER** : local address of the download folder (*preferably non-existent and empty*)
