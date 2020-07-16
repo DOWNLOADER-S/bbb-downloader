@@ -2,10 +2,11 @@
 
 For a video conference, the speaker has to use the [BigBlueButton](https://github.com/bigbluebutton) support. Fortunately, despite the recording of the conference, it remains accessible only on the latter's website, so it is not accessible offline. In addition to this, BBB tries to limit downloads by separating video and audio.
 
-It is by starting from this principle and by failing with the other proposed methods, that I decided to build a shell script in order to:
+It is by starting from this principle and by failing with the other proposed methods, that I decided to build a shell and a batch script in order to:
 - download the video AND the sound (*July 2020: not yet the comments of the conference, it's in progress, but is it really important?*)
 - merge the two files
 - allow the final file to be downloaded from any device (by FTP and deposit on a free server)
+- *all in one action!*
 
 > **In the end, in about 5 min for ~200Mb, you get your file ready to view and store wherever you want!**
 
