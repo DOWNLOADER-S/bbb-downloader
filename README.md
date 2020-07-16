@@ -11,9 +11,9 @@ It is by starting from this principle and by failing with the other proposed met
 
 # 4 ways to do
 - **[UNIX](#unix)** : see the details delow
-- **WINDOWS** (1) : use the script '*down_win.bat*' and **run as administrator**
+- **WINDOWS** (1) : use the script '*down_win.bat*', **run as administrator** and answer the questions
 - **WINDOWS** (2) : use the executable file '*bbb-downloader.exe*' which is the same thing but does not require any special skills except double-clicking on the file
-- **WINDOWS** (3) : use a **virtual machine** to run the above UNIX script
+- **WINDOWS** (3) : use a **virtual machine** to run the above UNIX script ([tutorial link](https://medium.com/platform-engineer/how-to-install-debian-linux-on-virtualbox-with-guest-additions-778afa0ee7e0))
 
 ---
 ## UNIX
