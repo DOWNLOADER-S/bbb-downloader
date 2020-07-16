@@ -32,7 +32,7 @@ echo The script is finished! If you have not had an error, everything has worked
 echo Thanks for use of BBB-downloader!
 echo To sump up :
 echo The final file is called %fiNAME%.mp4 and is located here: %FOLDER%\BBB-DOWNLOADER\
-if FTP == Y (
+if %FTP% == Y (
 echo The final file has been uploaded to the server, you will receive an email to download it to this address: %EMAIL%
 )
 echo _
