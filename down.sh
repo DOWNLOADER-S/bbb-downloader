@@ -65,9 +65,9 @@ curl -q -T "../$DOWNLOAD/$fiNAME" -u "$EMAIL":'test' ftp://dl.free.fr/
 
 if [ $? -eq 0 ]
 then
-    echo "Fichier $fiNAME transféré avec succès, le lien de téléchargement a été envoyé à l'adresse $EMAIL."
+    echo "$FiNAME successfully transferred to the server! the download link was sent to $EMAIL."
 else
-    echo "Erreur lors du transfert ! vérifiez votre configuration ou réessayez plus tard."
+    echo "Error during transfer! check your configuration or try again later."
 fi
 
 fi
