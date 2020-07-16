@@ -6,7 +6,7 @@ It is by starting from this principle and by failing with the other proposed met
 - download the video AND the sound (*July 2020: not yet the comments of the conference, it's in progress, but is it really important?*)
 - merge the two files
 - allow the final file to be downloaded from any device (by FTP and deposit on a free server)
-- *all in one action!*
+- **all in one action!**
 
 > **In the end, in about 5 min for ~200Mb, you get your file ready to view and store wherever you want!**
 
