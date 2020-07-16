@@ -7,10 +7,10 @@ It is by starting from this principle and by failing with the other proposed met
 - merge the two files
 - allow the final file to be downloaded from any device (by FTP and deposit on a free server) - (*July 2020: only on the UNIX script at the moment*)
 
-**In the end, in about 5 min for ~200Mb, you get your file ready to view and store wherever you want!**
+> **In the end, in about 5 min for ~200Mb, you get your file ready to view and store wherever you want!**
 
 # 4 ways to do
-- **UNix** : see the details delow
+- **[UNiX](#unix)** : see the details delow
 - **WINDOWS** (1) : use the script '*down_win.bat*' and **run as administrator**
 - **WINDOWS** (2) : use the executable file '*bbb-downloader.exe*' which is the same thing but does not require any special skills except double-clicking on the file
 - **WINDOWS** (3) : use a **virtual machine** to run the above UNIX script
