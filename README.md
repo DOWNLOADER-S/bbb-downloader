@@ -5,9 +5,15 @@ For a video conference, the speaker has to use the [BigBlueButton](https://githu
 It is by starting from this principle and by failing with the other proposed methods, that I decided to build a shell script in order to:
 - download the video AND the sound (*July 2020: not yet the comments of the conference, it's in progress, but is it really important?*)
 - merge the two files
-- allow the final file to be downloaded from any device (by FTP and deposit on a free server).
+- allow the final file to be downloaded from any device (by FTP and deposit on a free server) - (*July 2020: only on the UNIX script at the moment*)
 
 **In the end, in about 5 min for ~200Mb, you get your file ready to view and store wherever you want!**
+
+## 4 ways to do
+- **UNix** : see the details delow
+- **WINDOWS** (1) : use the script '*down_win.bat*' and **run as administrator**
+- **WINDOWS** (2) : use the executable file '*bbb-downloader.exe*' which is the same thing but does not require any special skills except double-clicking on the file
+- **WINDOWS** (3) : use a **virtual machine** to run the above UNIX script
 
 *Required* :
 It is necessary to install the git package in order to clone the script and the directory on your device.
@@ -15,13 +21,13 @@ It is necessary to install the git package in order to clone the script and the 
 apt install git
 ```
 
-## Install Git clone
+## UNIX-Install Git clone
 ```{bash}
 git clone https://framagit.org/A-d-r-i/bbb-downloader.git
 cd bbb-downloader
 chmod u+x down.sh
 ```
-## Run the code
+## UNIX-Run the code
 Two options :
 - First: "basically" and interactively. Simply run the script and answer the questions.
 ```{bash}
@@ -46,7 +52,7 @@ The conference replay link should look like this:
 
 Sample of code with parameters : `./down.sh VIDEO_FOLDER domain.com 65edkjejhdjbt-6322321 finalvideo Y mail@domain.com`
 
-## Update Git clone
+## UNIX - Update Git clone
 It may be necessary in the future to update this script. For this it is extremely important to place yourself in the git folder "bbb-downloader" (say in the code) and to execute the code below:
 ```{bash}
 cd bbb-downloader
