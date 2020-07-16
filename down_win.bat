@@ -18,6 +18,6 @@ curl --output webcams.mp4 --url https://%URL%/presentation/%meetingID%/video/web
 curl --output deskshare.mp4 --url https://%URL%/presentation/%meetingID%/deskshare/deskshare.mp4
 
 ffmpeg -i webcams.mp4 -i deskshare.mp4 -c copy %fiNAME%.mp4
-echo "The script is finished! If you have not had an error, everything has worked fine!"
-echo "As a reminder, the final file is called %fiNAME%.mp4 and is located here: %FOLDER%/BBB-DOWNLOADER/"
+echo The script is finished! If you have not had an error, everything has worked fine!
+echo As a reminder, the final file is called %fiNAME%.mp4 and is located here: %FOLDER%\BBB-DOWNLOADER\
 pause
