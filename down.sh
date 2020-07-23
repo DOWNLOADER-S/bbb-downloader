@@ -17,8 +17,8 @@ apt install -y curl
 if [[ -z $1 && -z $2 && -z $3 && -z $4 && -z $5 && -z $6 ]]
 
 then
-#ask directory & server URL & meeting ID & name of the final file
-read -p 'What do you want to call the downloads folder? ==> ' DOWNLOAD
+#ask informations
+read -p 'What do you want to call the download folder? ==> ' DOWNLOAD
 read -p 'What is the server url (without "https" and "/" || e.g. domain.com)? ==> ' URL
 read -p 'What is the meeting ID? ==> ' meetingID
 read -p 'What do you want to call the final file? ==> ' NAME
