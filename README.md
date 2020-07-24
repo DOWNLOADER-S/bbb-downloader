@@ -25,6 +25,7 @@ apt install git
 ```
 
 ### Install Git clone
+Here are the packages that will be installed from the script (dependencies are not listed): `ffmpeg`,`ftp` and `curl`.
 ```{bash}
 git clone https://framagit.org/A-d-r-i/bbb-downloader.git
 cd bbb-downloader
