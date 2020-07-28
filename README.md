@@ -18,17 +18,10 @@ It is by starting from this principle and by failing with the other proposed met
 
 ---
 ## UNIX
-*Required* :
-It is necessary to install the git package in order to clone the script and the directory on your device.
-```{bash}
-apt install git
-```
-
-### Install Git clone
+### Download the script
 Here are the packages that will be installed from the script (dependencies are not listed): `ffmpeg`,`ftp` and `curl`.
 ```{bash}
-git clone https://framagit.org/A-d-r-i/bbb-downloader.git
-cd bbb-downloader
+curl -o "down_bbb.sh" https://framagit.org/downloader-s/bbb-downloader/-/raw/master/down_bbb.sh
 chmod u+x down_bbb.sh
 ```
 ### Run the code
@@ -56,14 +49,8 @@ The conference replay link should look like this:
 
 Sample of code with parameters : `./down_bbb.sh VIDEO_FOLDER domain.com 65edkjejhdjbt-6322321 finalvideo Y mail@domain.com`
 
-### Update Git clone
-It may be necessary in the future to update this script. For this it is extremely important to place yourself in the git folder "bbb-downloader" (say in the code) and to execute the code below:
-```{bash}
-cd bbb-downloader
-git reset --hard HEAD && git checkout master && git pull
-chmod u+x down_bbb.sh 
-```
-**And [run the script](#run-the-code) again!**
+### Update the script
+It may be necessary in the future to update this script : **it is important to do this regularly in order to keep a stable version and take advantage of all the features.** To do this, simply re-download the script from step **[Download the script](#download-the-script)**.
 
 ---
 
