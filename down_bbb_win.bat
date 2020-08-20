@@ -42,10 +42,11 @@ REM save images in library
 if %KEEP% == Y (
 cd "%FOLDER%\BBB-DOWNLOADER"
 md LIBRARY\%NAME%
-move /y DOWNLOAD\*.mp4 LIBRARY\%NAME% >nul
-rd /s /q DOWNLOAD
+move /y DOWNLOAD\*.mp4 LIBRARY\%NAME% > NUL
+rmdir /s /q DOWNLOAD > NUL
 ) else (
-rd /s DOWNLOAD
+cd "%FOLDER%\BBB-DOWNLOADER"
+rmdir /s /q DOWNLOAD > NUL
 )
 
 if %FTP% == Y (
