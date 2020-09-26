@@ -31,9 +31,7 @@ echo #__________________________________________________________________________
 echo #
 set /p FOLDER="What is the storage folder address (e.g. C:\Users\username\desktop)? ==> "
 echo #
-set /p URL="What is the server url (without "https" and "/" || e.g. domain.com)? ==> "
-echo #
-set /p meetingID="What is the meeting ID? ==> "
+set /p URL="What is the url of the document? ==> "
 echo #
 set /p fiNAME="What do you want to call the final file? ==> "
 echo #
@@ -56,8 +54,24 @@ tar -xf FFMPEG.zip
 
 copy %FOLDER%\BBB-DOWNLOADER\DOWNLOAD\ffmpeg-4.3.1-essentials_build\bin\ffmpeg.exe %FOLDER%\BBB-DOWNLOADER\DOWNLOAD\
 
-curl --output webcams.mp4 --url https://%URL%/presentation/%meetingID%/video/webcams.mp4
-curl --output deskshare.mp4 --url https://%URL%/presentation/%meetingID%/deskshare/deskshare.mp4
+REM Obtain host and meeting ID by use a python script
+echo %URL%>"TMP-URL-BBB-DOWNLOADER.txt"
+set URL=%URL%fin
+curl -o "BBB-DOWNLOADER-HOST.py" https://framagit.org/downloader-s/bbb-downloader/-/raw/master/BBB-DOWNLOADER-HOST.py
+curl -o "BBB-DOWNLOADER-MEETINGID.py" https://framagit.org/downloader-s/bbb-downloader/-/raw/master/BBB-DOWNLOADER-MEETINGID.py
+python BBB-DOWNLOADER-HOST.py TMP-URL-BBB-DOWNLOADER.txt > TMP-HOST-BBB-DOWNLOADER.txt
+set /p HOST=<TMP-HOST-BBB-DOWNLOADER.txt
+python BBB-DOWNLOADER-MEETINGID.py TMP-URL-BBB-DOWNLOADER.txt > TMP-MID-BBB-DOWNLOADER.txt
+set /p MID=<TMP-MID-BBB-DOWNLOADER.txt
+
+del TMP-URL-BBB-DOWNLOADER.txt
+del TMP-HOST-BBB-DOWNLOADER.txt
+del TMP-MID-BBB-DOWNLOADER.txt
+del BBB-DOWNLOADER-HOST.py
+del BBB-DOWNLOADER-MEETINGID.py
+
+curl --output webcams.mp4 --url https://%HOST%/presentation/%MID%/video/webcams.mp4
+curl --output deskshare.mp4 --url https://%HOST%/presentation/%MID%/deskshare/deskshare.mp4
 
 ffmpeg -i webcams.mp4 -i deskshare.mp4 -c copy "../%fiNAME%.mp4"
 
