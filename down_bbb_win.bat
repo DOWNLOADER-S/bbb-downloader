@@ -1,12 +1,35 @@
 @echo off
+
+:: BatchGotAdmin
+:-------------------------------------
+REM  --> Check for permissions
+>nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
+
+REM --> If error flag set, we do not have admin.
+if '%errorlevel%' NEQ '0' (
+    echo Requesting administrative privileges...
+    goto UACPrompt
+) else ( goto gotAdmin )
+
+:UACPrompt
+    echo Set UAC = CreateObject^("Shell.Application"^) > "%temp%\getadmin.vbs"
+    set params = %*:"=""
+    echo UAC.ShellExecute "cmd.exe", "/c %~s0 %params%", "", "runas", 1 >> "%temp%\getadmin.vbs"
+
+    "%temp%\getadmin.vbs"
+    del "%temp%\getadmin.vbs"
+    exit /B
+
+:gotAdmin
+    pushd "%CD%"
+    CD /D "%~dp0"
+:--------------------------------------
 echo #___________________________________________________________________________________
 echo #
 echo                This script need to run with administrator privileges            
 echo #___________________________________________________________________________________
 echo #
-set /p BIT="32 or 64 bit computer? ==> "
-echo #
-set /p FOLDER="What is the storage folder address (e.g. C:/Users/username/desktop/)? ==> "
+set /p FOLDER="What is the storage folder address (e.g. C:\Users\username\desktop)? ==> "
 echo #
 set /p URL="What is the server url (without "https" and "/" || e.g. domain.com)? ==> "
 echo #
@@ -28,10 +51,10 @@ cd BBB-DOWNLOADER
 mkdir DOWNLOAD
 cd DOWNLOAD
 
-curl --output FFMPEG.zip --url https://ffmpeg.zeranoe.com/builds/win%BIT%/static/ffmpeg-latest-win%BIT%-static.zip
+curl --output FFMPEG.zip --url https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-4.3.1-2020-09-21-essentials_build.zip
 tar -xf FFMPEG.zip
 
-copy %FOLDER%\BBB-DOWNLOADER\DOWNLOAD\ffmpeg-latest-win%BIT%-static\bin\ffmpeg.exe %FOLDER%\BBB-DOWNLOADER\DOWNLOAD\
+copy %FOLDER%\BBB-DOWNLOADER\DOWNLOAD\ffmpeg-4.3.1-essentials_build\bin\ffmpeg.exe %FOLDER%\BBB-DOWNLOADER\DOWNLOAD\
 
 curl --output webcams.mp4 --url https://%URL%/presentation/%meetingID%/video/webcams.mp4
 curl --output deskshare.mp4 --url https://%URL%/presentation/%meetingID%/deskshare/deskshare.mp4
@@ -71,7 +94,7 @@ echo A-d-r-i
 echo #
 echo Answer the question to finish the script and open the folder.
 echo #___________________________________________________________________________________
-set /p OTHER="Would you like to download another conference? (Y for yes and N for no) ==>"
+set /p OTHER="Would you like to download another conference? (Y for yes and N for no) ==> "
 if %OTHER% == Y (
 start "BBB-DOWNLOADER" "%~f0"
 %SystemRoot%\explorer.exe "%FOLDER%\BBB-DOWNLOADER\"
