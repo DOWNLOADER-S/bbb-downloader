@@ -49,10 +49,7 @@ cd BBB-DOWNLOADER
 mkdir DOWNLOAD
 cd DOWNLOAD
 
-curl --output FFMPEG.zip --url https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-4.3.1-2020-09-21-essentials_build.zip
-tar -xf FFMPEG.zip
-
-copy %FOLDER%\BBB-DOWNLOADER\DOWNLOAD\ffmpeg-4.3.1-essentials_build\bin\ffmpeg.exe %FOLDER%\BBB-DOWNLOADER\DOWNLOAD\
+curl --output ffmpeg.exe --url https://framagit.org/downloader-s/bbb-downloader/-/raw/master/BIN/ffmpeg.exe
 
 REM Obtain host and meeting ID by use a python script
 echo %URL%>"TMP-URL-BBB-DOWNLOADER.txt"
